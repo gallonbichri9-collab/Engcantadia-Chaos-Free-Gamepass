@@ -1,0 +1,174 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "engcantadia chaos",  -- Updated from "BeeLat Tadia"
+    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+    LoadingTitle = "HINDI KO NA KAYA",
+    LoadingSubtitle = "by lyravoid",  -- Updated from "by Cecilia"
+    ShowText = "BeeLat", -- for mobile users to unhide rayfield, change if you'd like
+    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+    ConfigurationSaving = {
+        Enabled = false,
+        FolderName = nil, -- Create a custom folder for your hub/game
+        FileName = "BeeLat"
+    },
+
+    Discord = {
+        Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+        Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+        RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+    },
+
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+        Title = "BeeLat Key System",
+        Subtitle = "Don't Leak This Pls",
+        Note = "Ask The Owner For Key", -- Use this to tell the user how to get a key
+        FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+        SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+        GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+        Key = {"https://pastebin.com/raw/K0YpcRSz"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+})
+
+local MainTab = Window:CreateTab("Characters", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+    Title = "You've Executed The Script Successfully ",
+    Content = "A Very Good Gui",
+    Duration = 5,
+    Image = nil,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Mitena",
+    Callback = function()
+        -- LocalScript
+
+        -- Get the player
+        local player = game:GetService("Players").LocalPlayer
+
+        -- Path to the MitenaGamepass object
+        local mitenaGamepass = player:WaitForChild("PlayerGui")
+        :WaitForChild("Character")
+        :WaitForChild("Frame")
+        :WaitForChild("ScrollingFrame")
+        :WaitForChild("MitenaGamepass")
+
+        -- Make it visible
+        mitenaGamepass.Visible = true
+
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "MitenaWardrobe",
+    Callback = function()
+        -- LocalScript
+
+        -- Get the local player
+        local player = game:GetService("Players").LocalPlayer
+
+        -- Wait for the GUI elements to load
+        local mitenaWardrobe = player:WaitForChild("PlayerGui")
+        :WaitForChild("Character")
+        :WaitForChild("Frame")
+        :WaitForChild("ScrollingFrame")
+        :WaitForChild("MitenaWardrobe")
+
+        -- Make the MitenaWardrobe visible
+        mitenaWardrobe.Visible = true
+
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Amihan",
+    Callback = function()
+        -- LocalScript
+
+        -- Get the local player
+        local player = game:GetService("Players").LocalPlayer
+
+        -- Wait for the GUI elements to load safely
+        local amihan = player:WaitForChild("PlayerGui")
+        :WaitForChild("Character")
+        :WaitForChild("Frame")
+        :WaitForChild("ScrollingFrame")
+        :WaitForChild("Amihan")
+
+        -- Make the Amihan object visible
+        amihan.Visible = true
+
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Amihan Ivtre",
+    Callback = function()
+        -- LocalScript
+
+        -- Get the local player
+        local player = game:GetService("Players").LocalPlayer
+
+        -- Wait for all GUI elements to load properly
+        local amihanSkinIvtre = player:WaitForChild("PlayerGui")
+        :WaitForChild("Character")
+        :WaitForChild("Frame")
+        :WaitForChild("ScrollingFrame")
+        :WaitForChild("AmihanSkinIvtre")
+
+        -- Make the object visible
+        amihanSkinIvtre.Visible = true
+
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Cassiopeia Skin",
+    Callback = function()
+        -- LocalScript
+
+        -- Get the local player
+        local player = game:GetService("Players").LocalPlayer
+
+        -- Wait for all GUI elements to load safely
+        local cassiopeiaSkin = player:WaitForChild("PlayerGui")
+        :WaitForChild("Character")
+        :WaitForChild("Frame")
+        :WaitForChild("ScrollingFrame")
+        :WaitForChild("Cassiopeia Skin")  -- object with a space in its name
+
+        -- Make it visible
+        cassiopeiaSkin.Visible = true
+
+    end,
+})
+
+local Button = MainTab:CreateButton({
+    Name = "Anaca",
+    Callback = function()
+        -- LocalScript
+
+        -- Get the local player
+        local player = game:GetService("Players").LocalPlayer
+
+        -- Wait for all GUI elements to load
+        local anacaBadgePass = player:WaitForChild("PlayerGui")
+        :WaitForChild("Character")
+        :WaitForChild("Frame")
+        :WaitForChild("ScrollingFrame")
+        :WaitForChild("AnacaBADGEPASS")
+
+        -- Make the object visible
+        anacaBadgePass.Visible = true
+
+    end,
+})
